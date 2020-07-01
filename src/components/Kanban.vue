@@ -1,18 +1,18 @@
 <template>
     <div class="statuses">
         <div class="one-block" v-for="(status, index) in statuses" v-bind:key="index">
-            <Status :status="status" :todos="todos" v-on:selected="selected"/>
+            <Lane :status="status" :todos="todos" v-on:selected="selected"/>
         </div>
     </div>
 </template>
 
 <script>
-    import Status from "./Status";
+    import Lane from "./Lane";
 
     export default {
-        name: "TodoArea",
+        name: "Kanban",
         components: {
-            Status
+            Lane
         },
         props: {
             todos: Array

@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: "Status",
+        name: "Lane",
         props: {
             status: Object,
             todos: Array

@@ -2,26 +2,27 @@
     <div>
         <h2>かんばんボード</h2>
         <p>このボードは、テクコン部新人3名によるVue.jsの演習成果物である。</p>
-        <TodoArea :todos="todos" v-on:selected="selected"/>
-        <DetailForm :show-details="showDetails"
-                    :selectedTodo="selectedTodo"
-                    v-on:closeEvent="showDetails = false"
-                    v-on:changeEvent="change"
-                    v-on:removeEvent="remove"
-                    ref="new"
+        <Kanban :todos="todos" v-on:selected="selected"/>
+        <DetailForm
+                :show-details="showDetails"
+                :selectedTodo="selectedTodo"
+                v-on:closeEvent="showDetails = false"
+                v-on:changeEvent="change"
+                v-on:removeEvent="remove"
+                ref="new"
         />
     </div>
 </template>
 
 <script>
     import DetailForm from "./DetailForm";
-    import TodoArea from "./TodoArea";
+    import Kanban from "./Kanban";
 
     export default {
-        name: "Page",
+        name: "MainPage",
         components: {
             DetailForm,
-            TodoArea
+            Kanban
         },
         data() {
             return {
