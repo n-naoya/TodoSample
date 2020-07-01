@@ -2,14 +2,19 @@
     <div>
         <h4>{{status.name}}</h4>
         <div v-for="(todo, index) in todos" v-bind:key="index">
-            <div v-if="status.num === todo.status" @click="$emit('selected', todo)">{{todo.name}}</div>
+            <Card v-if="status.num === todo.status" :todo="todo" />
         </div>
     </div>
 </template>
 
 <script>
+    import Card from "./Card";
+
     export default {
         name: "Lane",
+        components: {
+            Card
+        },
         props: {
             status: Object,
             todos: Array
