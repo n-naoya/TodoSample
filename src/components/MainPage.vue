@@ -1,7 +1,6 @@
 <template>
     <div>
         <h2>かんばんボード</h2>
-        <p>このボードは、テクコン部新人3名によるVue.jsの演習成果物である。</p>
         <Kanban />
     </div>
 </template>
